@@ -1,5 +1,5 @@
 import { readDeck } from "../utils/api"
-import DeckRouter from "./DeckRouter"
+//import DeckRouter from "./DeckRouter"
 
 
 function Study(deckId){

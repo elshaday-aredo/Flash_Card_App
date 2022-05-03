@@ -12,9 +12,9 @@ function Layout() {
       <div className="container">
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-          <li className="breadcrumb-item"><a href="#">Library</a></li>
-          <li className="breadcrumb-item active" aria-current="page">Data</li>
+          <li key="home" className="breadcrumb-item"><Link to="/">Home</Link></li>
+          <li key="study" className="breadcrumb-item"><a href="#">Library</a></li>
+          <li key="edit" className="breadcrumb-item active" aria-current="page">Data</li>
         </ol>
       </nav>
         <Switch>

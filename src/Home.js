@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { listDecks } from "./utils/api";
+import { deleteDeck } from "./utils/api";
 
 
 function Home (){
@@ -17,10 +18,11 @@ function Home (){
   },[]);
  
 
-  const deleteDeck= (deckToDelete) => {
+  const trashDeck= async (deckToDelete) => {
     setDecks((currentDecks) => {
-      currentDecks.filter((deck) => deckToDelete !== deck)
-    })
+     return currentDecks.filter((deck) => deckToDelete !== deck)
+    });
+    await deleteDeck(deckToDelete.id)
   }
   console.log(decks)
 
@@ -35,7 +37,7 @@ function Home (){
           <p className="card-text">{deck.description}</p>
           <a href="#" className="btn btn-primary mr-5" >View</a>
           <Link to={`decks/${deck.id}/study`} className="btn btn-primary mr-5">Study</Link>
-          <a href="#" onClick={() => deleteDeck} className="btn btn-danger">Delete</a>
+          <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">Delete</a>
           
       </div>
   </div> 
@@ -46,7 +48,6 @@ function Home (){
       <>  
       {createDeckbtn}  
       {deckCards}
-
       
       </>
 
