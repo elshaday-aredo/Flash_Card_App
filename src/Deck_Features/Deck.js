@@ -42,7 +42,7 @@ const listofCards = deck.cards.map((card)=> {
       <div className="card-body">
         <p>{card.front}</p>
         <p className="card-text">{card.back}</p>
-        <Link to={`/decks/${deck.id}/cards/${card.id}/edit`} className="btn btn-secondary mr-5">Edit</Link>
+        <Link to={`/decks/${deck.id}/cards/${card.id}/edit`} className="btn btn-secondary mr-3">Edit</Link>
         <a href="#" onClick={()=>{trashCard(card)}}className="btn btn-danger">Delete</a>
       </div>
     </div> 
@@ -81,12 +81,13 @@ return (
         <h5 className="card-title">{deck.name}</h5>
         <p>{deck.cards.length} cards</p>
         <p className="card-text">{deck.description}</p>
-        <Link to={`/decks/${deckId}/edit`} className="btn btn-secondary mr-1">Edit</Link>
-        <Link to={`/decks/${deckId}/study`} className="btn btn-primary mr-1">Study</Link>
-        <Link to={`/decks/${deckId}/cards/new`} className="btn btn-primary mr-5">Add Card</Link>
-        <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">Delete</a>
+        <Link to={`/decks/${deckId}/edit`} className="btn btn-secondary mr-2 mb-5">Edit</Link>
+        <Link to={`/decks/${deckId}/study`} className="btn btn-primary mr-2 mb-5">Study</Link>
+        <Link to={`/decks/${deckId}/cards/new`} className="btn btn-primary mr-5 mb-5">Add Cards</Link>
+        <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger mb-5">Delete</a>
 
-        <h1>Cards</h1>
+
+        <h2>Cards</h2>
         {listofCards}
       </Route>
       <Route>
