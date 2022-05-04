@@ -5,6 +5,7 @@ import EditDeck from "./EditDeck"
 import AddCard from "./AddCard"
 import EditCard from "./EditCard"
 import Study from "./Study"
+import NotFound from "../Layout/NotFound"
 
 
 function Deck() {
@@ -37,7 +38,7 @@ const listofCards = deck.cards.map((card)=> {
   return (
 
 
-    <div className="card">
+    <div key={card.id} className="card">
       <div className="card-body">
         <p>{card.front}</p>
         <p className="card-text">{card.back}</p>
@@ -87,6 +88,9 @@ return (
 
         <h1>Cards</h1>
         {listofCards}
+      </Route>
+      <Route>
+        <NotFound />
       </Route>
     </Switch>
 

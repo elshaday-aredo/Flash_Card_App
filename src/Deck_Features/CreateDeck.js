@@ -28,34 +28,34 @@ function CreateDeck() {
   return (
     <>
     <nav aria-label="breadcrumb">
-    <ol className="breadcrumb">
-      <li key="home" className="breadcrumb-item"><Link to="/">Home</Link></li>
-      <li key="CreateDeck" className="breadcrumb-item active" aria-current="page">Create Deck</li>
-    </ol>
-  </nav>
+      <ol className="breadcrumb">
+        <li key="home" className="breadcrumb-item"><Link to="/">Home</Link></li>
+        <li key="CreateDeck" className="breadcrumb-item active" aria-current="page">Create Deck</li>
+      </ol>
+    </nav>
 
     <form onSubmit={handleFormSubmit}>
-  <div className="mb-3">
-    <label htmlFor="name"className="form-label">name</label>
-    <input onChange={handleChange} 
-    value={formData.name} 
-    type="text" 
-    className="form-control" 
-    name="name" 
-    id="name"/>
-  </div>
-  <div className="mb-3">
-    <label className="form-label">Description</label>
-    <input onChange={handleChange}
-    value={formData.description} 
-    type="text-area" 
-    className="form-control" 
-    name="description" 
-    id="description"/>
-  </div>
-  <Link to="/" type="button" className="btn btn-danger mr-5">cancel</Link>
-  <button type="submit" className="btn btn-primary">Submit</button>
-</form>
+      <div className="mb-3">
+        <label htmlFor="name"className="form-label">name</label>
+        <input onChange={handleChange} 
+        value={formData.name} 
+        type="text" 
+        className="form-control" 
+        name="name" 
+        id="name"/>
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Description</label>
+        <input onChange={handleChange}
+        value={formData.description} 
+        type="text-area" 
+        className="form-control" 
+        name="description" 
+        id="description"/>
+      </div>
+      <Link to="/" type="button" className="btn btn-danger mr-5">cancel</Link>
+      <button type="submit" className="btn btn-primary">Submit</button>
+    </form>
 
 </>
   )
