@@ -16,11 +16,11 @@ function EditCard({deckName}){
       setFormData(card);
     }
     getCard();
-  },[])
+  },[cardId])
 
   async function handleFormSubmit(event){
     event.preventDefault();
-    const cardUpdated = await updateCard(formData)
+    await updateCard(formData)
     history.push(`/decks/${deckId}`)
 }
 function handleChange({target}){

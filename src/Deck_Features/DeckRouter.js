@@ -1,6 +1,5 @@
 import {Switch, Route} from "react-router-dom"
 import CreateDeck from "./CreateDeck"
-import Study from "./Study"
 import Deck from "./Deck"
 import NotFound from "../Layout/NotFound"
 

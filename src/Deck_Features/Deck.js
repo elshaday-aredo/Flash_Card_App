@@ -46,9 +46,9 @@ const listofCards = deck.cards.map((card)=> {
          <span className="oi oi-pencil" title="pencil" aria-hidden="true"></span> Edit
         </Link>
     
-        <a href="#" onClick={()=>{trashCard(card)}}className="btn btn-danger">
+        <button onClick={()=>{trashCard(card)}}className="btn btn-danger">
           <span className="oi oi-trash" title="trash" aria-hidden="true"></span>
-        </a>
+        </button>
       </div>
     </div> 
 
@@ -80,7 +80,7 @@ return (
           <ol className="breadcrumb">
             <li key="home" className="breadcrumb-item">
               <Link to="/">
-                <span class="oi oi-home"></span> Home
+                <span className="oi oi-home"></span> Home
               </Link>
             </li>
             <li key="deckName" className="breadcrumb-item active">{deck.name}</li>
@@ -102,9 +102,9 @@ return (
           <span className="oi oi-plus" title="plus" aria-hidden="true"></span> &nbsp; Add Cards
         </Link>
        
-        <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger mb-5">
-        <span className="oi oi-trash" title="trash" aria-hidden="true"></span>
-        </a>
+        <button onClick={() => trashDeck(deck)} className="btn btn-danger mb-5">
+         <span className="oi oi-trash" title="trash" aria-hidden="true"></span>
+        </button>
 
 
         <h2>Cards</h2>

@@ -16,11 +16,6 @@
       "id": 3
     },
     {
-      "name": "Animal Trivia ",
-      "description": "facts about animals ",
-      "id": 4
-    },
-    {
       "name": "elshaday trivia ",
       "description": "facts about me",
       "id": 5
@@ -63,12 +58,6 @@
       "id": 6
     },
     {
-      "front": "Robel bday?",
-      "back": "Nov 21",
-      "deckId": 6,
-      "id": 7
-    },
-    {
       "front": "first pres?",
       "back": "George Washington?",
       "deckId": 3,
@@ -93,14 +82,8 @@
       "id": 11
     },
     {
-      "front": "last name?",
-      "back": "aredo",
-      "deckId": 5,
-      "id": 13
-    },
-    {
       "front": "her age?",
-      "back": "30",
+      "back": "30 years old",
       "deckId": 5,
       "id": 14
     },
@@ -109,12 +92,6 @@
       "back": "Mouse and Hugo",
       "deckId": 5,
       "id": 15
-    },
-    {
-      "front": "her mom name?",
-      "back": "Wendy",
-      "deckId": 5,
-      "id": 16
     },
     {
       "front": "Does he like the outdoors?",

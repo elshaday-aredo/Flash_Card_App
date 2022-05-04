@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "../Home";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 import DeckRouter from "../Deck_Features/DeckRouter";
 
 function Layout() {

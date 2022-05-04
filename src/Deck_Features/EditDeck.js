@@ -16,7 +16,7 @@ function EditDeck({deckName}){
       setFormData(deck);
     }
     getDeck();
-  },[])
+  },[deckId])
 
   
 

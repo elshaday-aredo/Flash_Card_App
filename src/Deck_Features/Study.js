@@ -18,7 +18,7 @@ function Study(){
       setDeck(deck)
     }
     studyCard()
-  },[])
+  },[deckId])
 
 
 

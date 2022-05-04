@@ -48,9 +48,9 @@ function Home (){
             <Link to={`/decks/${deck.id}/study`} className="btn btn-primary mr-5">
              <span className="oi oi-book" title="book" aria-hidden="true"></span> Study
             </Link>
-            <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">
+            <button onClick={() => trashDeck(deck)} className="btn btn-danger">
              <span className="oi oi-trash" title="trash" aria-hidden="true"></span>
-            </a>
+            </button>
         </div>
       </div> 
   )

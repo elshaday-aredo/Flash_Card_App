@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react"
 import { createCard, readDeck } from "../utils/api"
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function AddCard({deckId, deckName}){
     const [deck, setDeck] = useState({})
     const [formData, setFormData] = useState({front:"", back:""})
-    const history= useHistory()
     
     useEffect(()=>{
       async function loadDeck(){
@@ -13,16 +12,15 @@ function AddCard({deckId, deckName}){
         setDeck(deckLoaded);
       }
       loadDeck();
-    },[])
+    },[deckId])
     
     
     async function handleFormSubmit(event){
         event.preventDefault();
         await createCard(deck.id, formData)
-        setFormData({front:"", back:""})  
-        //history.push(`/decks/${deck.id}`)
-
+        setFormData({front:"", back:""}) 
     }
+
     function handleChange({target}){
       const value = target.value
       setFormData({
