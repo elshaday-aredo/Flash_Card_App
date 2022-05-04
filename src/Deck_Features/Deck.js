@@ -59,7 +59,7 @@ return (
     <>
     <Switch>
       <Route exact path="/decks/:deckId/cards/new">
-        <AddCard />
+        <AddCard deckId={deck.id} deckName={deck.name}/>
       </Route>
       <Route exact path="/decks/:deckId/cards/:cardId/edit">
         <EditCard deckName={deck.name}/>

@@ -20,7 +20,6 @@ function CreateDeck() {
       ...formData,
       [target.name]: value,
     });
-    console.log({target})
 
   }
   

@@ -28,7 +28,7 @@ function Home (){
     } 
     
   }
-  console.log(decks)
+
 
   const createDeckbtn = <Link to="/decks/new" className="btn btn-primary mb-5" >Create Deck</Link>
 
@@ -42,7 +42,6 @@ function Home (){
             <a href="#" className="btn btn-primary mr-5" >View</a>
             <Link to={`decks/${deck.id}/study`} className="btn btn-primary mr-5">Study</Link>
             <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">Delete</a>
-            
         </div>
       </div> 
   )

@@ -9,6 +9,26 @@
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
+    },
+    {
+      "name": "Celebrity Trivia",
+      "description": "facts about public figures",
+      "id": 3
+    },
+    {
+      "name": "animal trivia ",
+      "description": "facts about animals ",
+      "id": 4
+    },
+    {
+      "name": "elshaday trivia ",
+      "description": "facts about me",
+      "id": 5
+    },
+    {
+      "name": "Robel Trivia",
+      "description": "fun facts about Robel ",
+      "id": 6
     }
   ],
   "cards": [
@@ -35,6 +55,66 @@
       "back": "Renders the first matching child <Route> ",
       "deckId": 2,
       "id": 5
+    },
+    {
+      "front": "robel last name?",
+      "back": "Aredo",
+      "deckId": 6,
+      "id": 6
+    },
+    {
+      "front": "Robel bday?",
+      "back": "Nov 21",
+      "deckId": 6,
+      "id": 7
+    },
+    {
+      "front": "first pres?",
+      "back": "George Washington?",
+      "deckId": 3,
+      "id": 8
+    },
+    {
+      "front": "channel Oprah owns?",
+      "back": "own network",
+      "deckId": 3,
+      "id": 9
+    },
+    {
+      "front": "Barak Obama wife?",
+      "back": "Michelle Obama",
+      "deckId": 3,
+      "id": 10
+    },
+    {
+      "front": "last name?",
+      "back": "Aredo",
+      "deckId": null,
+      "id": 11
+    },
+    {
+      "front": "last name?",
+      "back": "aredo",
+      "deckId": 5,
+      "id": 13
+    },
+    {
+      "front": "her age?",
+      "back": "30",
+      "deckId": 5,
+      "id": 14
+    },
+    {
+      "front": "her pets name?",
+      "back": "Mouse and Hugo",
+      "deckId": 5,
+      "id": 15
+    },
+    {
+      "front": "her mom name?",
+      "back": "Wendy",
+      "deckId": 5,
+      "id": 16
     }
   ]
 }
