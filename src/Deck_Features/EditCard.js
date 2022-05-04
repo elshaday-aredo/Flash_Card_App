@@ -3,7 +3,7 @@ import {useRouteMatch, useHistory, Link } from "react-router-dom";
 import { useState, useEffect, } from "react"
 
 
-function EditCard(){
+function EditCard({deckName}){
   const {cardId,deckId} = useRouteMatch().params;
   const history = useHistory()
   const initialFormData = {front:"", back:""}
@@ -33,6 +33,14 @@ function handleChange({target}){
 
   return (
     <>
+      <nav aria-label="breadcrumb">
+        <ol className="breadcrumb">
+          <li key="home" className="breadcrumb-item"><Link to="/">Home</Link></li>
+          <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>
+          <li key="editCard" className="breadcrumb-item active" aria-current="page">Edit Card {cardId}</li>
+        </ol>
+      </nav>
+
     <h1>Edit Card</h1>
     <form onSubmit={handleFormSubmit}>
       <div className="mb-3">

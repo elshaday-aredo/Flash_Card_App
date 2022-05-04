@@ -62,10 +62,10 @@ return (
         <AddCard />
       </Route>
       <Route exact path="/decks/:deckId/cards/:cardId/edit">
-        <EditCard />
+        <EditCard deckName={deck.name}/>
       </Route>
       <Route exact path="/decks/:deckId/edit">
-        <EditDeck />
+        <EditDeck deckName={deck.name}/>
       </Route>
       <Route exact path="/decks/:deckId/study">
       <Study />
