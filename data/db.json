@@ -115,6 +115,36 @@
       "back": "Wendy",
       "deckId": 5,
       "id": 16
+    },
+    {
+      "front": "Does he like the outdoors?",
+      "back": "yes",
+      "deckId": 6,
+      "id": 17
+    },
+    {
+      "front": "Are dogs mammals?",
+      "back": "yes",
+      "deckId": 4,
+      "id": 18
+    },
+    {
+      "front": "are cats mammals?",
+      "back": "yes",
+      "deckId": 4,
+      "id": 19
+    },
+    {
+      "front": "are dogs nocturnal?",
+      "back": "no",
+      "deckId": 4,
+      "id": 20
+    },
+    {
+      "front": "fastest mammal?",
+      "back": "Cheetah",
+      "deckId": 4,
+      "id": 21
     }
   ]
 }

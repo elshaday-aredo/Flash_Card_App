@@ -19,8 +19,8 @@ function AddCard({deckId, deckName}){
     async function handleFormSubmit(event){
         event.preventDefault();
         await createCard(deck.id, formData)
-        // setFormData({front:"", back:""})  I need it to go back to empty 
-        history.push(`/decks/${deck.id}`)
+        setFormData({front:"", back:""})  
+        //history.push(`/decks/${deck.id}`)
 
     }
     function handleChange({target}){
@@ -42,25 +42,31 @@ function AddCard({deckId, deckName}){
           <li key="AddCard" className="breadcrumb-item active" aria-current="page">Add Card</li>
         </ol>
       </nav>
-  
+      <h2>{deckName}: Add Card</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <label htmlFor="front"className="form-label">front</label>
-          <input onChange={handleChange} 
+          <textarea onChange={handleChange} 
           value={formData.front} 
           type="text" 
           className="form-control" 
           name="front" 
-          id="front"/>
+          id="front"
+          placeholder="Front side of card"
+          rows="2" />
         </div>
         <div className="mb-3">
           <label className="form-label">back</label>
-          <input onChange={handleChange}
-          value={formData.back} 
-          type="text-area" 
+          <textarea onChange={handleChange}
+          value={formData.back}
+          type="text"
           className="form-control" 
           name="back" 
-          id="back"/>
+          id="back" 
+          placeholder="Back side of card"
+          rows="2"/>
+          
+    
         </div>
         <Link to={`/decks/${deckId}`} type="button" className="btn btn-secondary mr-5">Done</Link>
         <button type="submit" className="btn btn-primary">Save</button>
