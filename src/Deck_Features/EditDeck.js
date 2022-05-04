@@ -49,7 +49,7 @@ function handleChange({target}){
     <h1>Edit Deck</h1>
     <form onSubmit={handleFormSubmit}>
       <div className="mb-3">
-        <label htmlFor="name"className="form-label">name</label>
+        <label htmlFor="name"className="form-label">Name</label>
         <input onChange={handleChange} 
         value={formData.name} 
         type="text" 
@@ -59,12 +59,13 @@ function handleChange({target}){
       </div>
       <div className="mb-3">
         <label className="form-label">Description</label>
-        <input onChange={handleChange}
+        <textarea onChange={handleChange}
         value={formData.description} 
         type="text-area" 
         className="form-control" 
         name="description" 
-        id="description"/>
+        id="description"
+        row="3"/>
       </div>
       <Link to="/" type="button" className="btn btn-danger mr-5">cancel</Link>
       <button type="submit" className="btn btn-primary">Submit</button>
