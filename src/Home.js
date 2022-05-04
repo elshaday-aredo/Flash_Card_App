@@ -19,10 +19,14 @@ function Home (){
  
 
   const trashDeck= async (deckToDelete) => {
-    setDecks((currentDecks) => {
-     return currentDecks.filter((deck) => deckToDelete !== deck)
-    });
-    await deleteDeck(deckToDelete.id)
+    if (window.confirm("Delete this deck?")){
+      setDecks((currentDecks) => {
+        return currentDecks.filter((deck) => deckToDelete !== deck)
+       })
+       await deleteDeck(deckToDelete.id)
+
+    } 
+    
   }
   console.log(decks)
 
@@ -31,16 +35,16 @@ function Home (){
   const deckCards = decks.map((deck) => 
 
       <div className="card">
-      <div className="card-body">
-          <h5 className="card-title">{deck.name}</h5>
-          <p>{deck.cards.length} cards</p>
-          <p className="card-text">{deck.description}</p>
-          <a href="#" className="btn btn-primary mr-5" >View</a>
-          <Link to={`decks/${deck.id}/study`} className="btn btn-primary mr-5">Study</Link>
-          <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">Delete</a>
-          
-      </div>
-  </div> 
+        <div className="card-body">
+            <h5 className="card-title">{deck.name}</h5>
+            <p>{deck.cards.length} cards</p>
+            <p className="card-text">{deck.description}</p>
+            <a href="#" className="btn btn-primary mr-5" >View</a>
+            <Link to={`decks/${deck.id}/study`} className="btn btn-primary mr-5">Study</Link>
+            <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">Delete</a>
+            
+        </div>
+      </div> 
   )
 
 

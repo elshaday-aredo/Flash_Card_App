@@ -1,6 +1,7 @@
 import {Switch, Route} from "react-router-dom"
 import CreateDeck from "./CreateDeck"
 import Study from "./Study"
+import Deck from "./Deck"
 
 function DeckRouter(){
 
@@ -11,8 +12,8 @@ function DeckRouter(){
       <Route path="/decks/new">
         <CreateDeck />
       </Route>
-      <Route path="/decks/:deckId/study">
-        <Study />
+      <Route path="/decks/:deckId">
+        <Deck />
       </Route>
     </Switch>
 
