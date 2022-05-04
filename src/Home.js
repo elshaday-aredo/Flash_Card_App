@@ -30,7 +30,9 @@ function Home (){
   }
 
 
-  const createDeckbtn = <Link to="/decks/new" className="btn btn-primary mb-5" >Create Deck</Link>
+  const createDeckbtn = <Link to="/decks/new" className="btn btn-primary mb-5" >
+    <span className="oi oi-plus" title="plus" aria-hidden="true"></span> &nbsp; Create Deck
+  </Link>
 
   const deckCards = decks.map((deck) => 
 
@@ -39,9 +41,16 @@ function Home (){
             <h5 className="card-title">{deck.name}</h5>
             <p>{deck.cards.length} cards</p>
             <p className="card-text">{deck.description}</p>
-            <Link to={`/decks/${deck.id}`}  className="btn btn-primary mr-5" >View</Link>
-            <Link to={`/decks/${deck.id}/study`} className="btn btn-primary mr-5">Study</Link>
-            <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">Delete</a>
+            <Link to={`/decks/${deck.id}`}  className="btn btn-secondary mr-5" >
+             <span className="oi oi-eye" title="eye" aria-hidden="true"></span> View
+            </Link>
+
+            <Link to={`/decks/${deck.id}/study`} className="btn btn-primary mr-5">
+             <span className="oi oi-book" title="book" aria-hidden="true"></span> Study
+            </Link>
+            <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">
+             <span className="oi oi-trash" title="trash" aria-hidden="true"></span>
+            </a>
         </div>
       </div> 
   )

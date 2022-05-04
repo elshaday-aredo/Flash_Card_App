@@ -35,9 +35,13 @@ function handleChange({target}){
     <>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li key="home" className="breadcrumb-item"><Link to="/">Home</Link></li>
-          <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>
-          <li key="editCard" className="breadcrumb-item active" aria-current="page">Edit Card {cardId}</li>
+        <li key="home" className="breadcrumb-item">
+          <Link to="/">
+            <span class="oi oi-home"></span> Home
+          </Link>
+        </li>
+        <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>
+        <li key="editCard" className="breadcrumb-item active" aria-current="page">Edit Card {cardId}</li>
         </ol>
       </nav>
 

@@ -42,8 +42,13 @@ const listofCards = deck.cards.map((card)=> {
       <div className="card-body">
         <p>{card.front}</p>
         <p className="card-text">{card.back}</p>
-        <Link to={`/decks/${deck.id}/cards/${card.id}/edit`} className="btn btn-secondary mr-3">Edit</Link>
-        <a href="#" onClick={()=>{trashCard(card)}}className="btn btn-danger">Delete</a>
+        <Link to={`/decks/${deck.id}/cards/${card.id}/edit`} className="btn btn-secondary mr-3">
+         <span className="oi oi-pencil" title="pencil" aria-hidden="true"></span> Edit
+        </Link>
+    
+        <a href="#" onClick={()=>{trashCard(card)}}className="btn btn-danger">
+          <span className="oi oi-trash" title="trash" aria-hidden="true"></span>
+        </a>
       </div>
     </div> 
 
@@ -73,7 +78,11 @@ return (
       <Route exact path="/decks/:deckId">
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
-            <li key="home" className="breadcrumb-item"><Link to="/">Home</Link></li>
+            <li key="home" className="breadcrumb-item">
+              <Link to="/">
+                <span class="oi oi-home"></span> Home
+              </Link>
+            </li>
             <li key="deckName" className="breadcrumb-item active">{deck.name}</li>
           </ol>
         </nav>
@@ -81,10 +90,21 @@ return (
         <h5 className="card-title">{deck.name}</h5>
         <p>{deck.cards.length} cards</p>
         <p className="card-text">{deck.description}</p>
-        <Link to={`/decks/${deckId}/edit`} className="btn btn-secondary mr-2 mb-5">Edit</Link>
-        <Link to={`/decks/${deckId}/study`} className="btn btn-primary mr-2 mb-5">Study</Link>
-        <Link to={`/decks/${deckId}/cards/new`} className="btn btn-primary mr-5 mb-5">Add Cards</Link>
-        <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger mb-5">Delete</a>
+        <Link to={`/decks/${deckId}/edit`} className="btn btn-secondary mr-2 mb-5">
+         <span className="oi oi-pencil" title="pencil" aria-hidden="true"></span> Edit
+        </Link>
+
+        <Link to={`/decks/${deckId}/study`} className="btn btn-primary mr-2 mb-5">
+         <span className="oi oi-book" title="book" aria-hidden="true"></span> Study
+        </Link>
+
+        <Link to={`/decks/${deckId}/cards/new`} className="btn btn-primary mr-5 mb-5">
+          <span className="oi oi-plus" title="plus" aria-hidden="true"></span> &nbsp; Add Cards
+        </Link>
+       
+        <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger mb-5">
+        <span className="oi oi-trash" title="trash" aria-hidden="true"></span>
+        </a>
 
 
         <h2>Cards</h2>

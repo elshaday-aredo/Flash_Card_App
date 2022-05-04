@@ -39,9 +39,13 @@ function handleChange({target}){
     <>
     <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li key="home" className="breadcrumb-item"><Link to="/">Home</Link></li>
-          <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>
-          <li key="editDeck" className="breadcrumb-item active" aria-current="page">Edit Deck</li>
+        <li key="home" className="breadcrumb-item">
+          <Link to="/">
+            <span class="oi oi-home"></span> Home
+          </Link>
+        </li>          
+        <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>
+        <li key="editDeck" className="breadcrumb-item active" aria-current="page">Edit Deck</li>
         </ol>
     </nav>
 
@@ -67,7 +71,7 @@ function handleChange({target}){
         id="description"
         row="3"/>
       </div>
-      <Link to="/" type="button" className="btn btn-danger mr-5">cancel</Link>
+      <Link to="/" type="button" className="btn btn-secondary mr-5">Cancel</Link>
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
     </>
