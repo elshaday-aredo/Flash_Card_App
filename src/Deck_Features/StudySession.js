@@ -49,9 +49,9 @@ function StudySession({cards}){
     return (
         <div className="card">
         <div className="card-body">
-          <h5 className="card-title mb-3">card {session.cardIndex + 1} out of {cards.length}</h5>
+          <h5 className="card-title mb-3">Card {session.cardIndex + 1} of {cards.length}</h5>
           <CardStudyInfo card={cards[session.cardIndex]} front={session.front}/> 
-          <button onClick={()=> setSession({...session, front:!session.front})}className="btn btn-primary mr-5">Flip</button>
+          <button onClick={()=> setSession({...session, front:!session.front})}className="btn btn-secondary mr-5">Flip</button>
           <NextCardBtn handleNextClick={handleNextClick}front={session.front} />
         </div>
       </div>

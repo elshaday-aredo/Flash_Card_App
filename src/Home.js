@@ -39,8 +39,8 @@ function Home (){
             <h5 className="card-title">{deck.name}</h5>
             <p>{deck.cards.length} cards</p>
             <p className="card-text">{deck.description}</p>
-            <a href="#" className="btn btn-primary mr-5" >View</a>
-            <Link to={`decks/${deck.id}/study`} className="btn btn-primary mr-5">Study</Link>
+            <Link to={`/decks/${deck.id}`}  className="btn btn-primary mr-5" >View</Link>
+            <Link to={`/decks/${deck.id}/study`} className="btn btn-primary mr-5">Study</Link>
             <a href="#" onClick={() => trashDeck(deck)} className="btn btn-danger">Delete</a>
         </div>
       </div> 

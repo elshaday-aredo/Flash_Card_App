@@ -33,7 +33,7 @@ function Study(){
             <li key="Study" className="breadcrumb-item active" aria-current="page">Study</li>
           </ol>
         </nav>
-          <h1>Study: {deck.name}</h1>
+          <h1>{deck.name}: Study</h1>
       <StudySession cards={cards} />
       
     
