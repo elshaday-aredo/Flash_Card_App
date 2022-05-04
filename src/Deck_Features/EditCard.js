@@ -45,21 +45,23 @@ function handleChange({target}){
     <form onSubmit={handleFormSubmit}>
       <div className="mb-3">
         <label htmlFor="front"className="form-label">Front</label>
-        <input onChange={handleChange} 
+        <textarea onChange={handleChange} 
         value={formData.front} 
         type="text" 
         className="form-control" 
         name="front" 
-        id="front"/>
+        id="front"
+        row="3"/>
       </div>
       <div className="mb-3">
         <label className="form-label">Back</label>
-        <input onChange={handleChange}
+        <textarea onChange={handleChange}
         value={formData.back} 
         type="text-area" 
         className="form-control" 
         name="back" 
-        id="back"/>
+        id="back"
+        row="3"/>
       </div>
       <Link to="/" type="button" className="btn btn-secondary mr-5">Done</Link>
       <button type="submit" className="btn btn-primary">Save</button>
