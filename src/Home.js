@@ -15,6 +15,7 @@ function Home (){
           
       };
     getListOfDecks()
+    return()=>{setDecks([])}
   },[]);
  
 

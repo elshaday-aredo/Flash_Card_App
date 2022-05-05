@@ -21,8 +21,8 @@
       "id": 5
     },
     {
-      "name": "Robel Trivia",
-      "description": "fun facts about Robel ",
+      "name": "Elshaday ",
+      "description": "facts about myself",
       "id": 6
     }
   ],
@@ -95,7 +95,7 @@
     },
     {
       "front": "Does he like the outdoors?",
-      "back": "yes",
+      "back": "yes he loves it",
       "deckId": 6,
       "id": 17
     },
@@ -122,6 +122,12 @@
       "back": "Cheetah",
       "deckId": 4,
       "id": 21
+    },
+    {
+      "front": "whats my last name?",
+      "back": "Aredo ",
+      "deckId": 6,
+      "id": 22
     }
   ]
 }

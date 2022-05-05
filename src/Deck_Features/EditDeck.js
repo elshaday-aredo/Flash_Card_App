@@ -7,7 +7,7 @@ function EditDeck({deckName}){
   const {deckId} = useRouteMatch().params;
   const history = useHistory()
   const initialFormData = {name:"", description:""}
-  const [formData, setFormData]= useState({...initialFormData});
+  const [formData, setFormData]= useState(initialFormData);
 
 
   useEffect(()=>{
@@ -16,6 +16,7 @@ function EditDeck({deckName}){
       setFormData(deck);
     }
     getDeck();
+    return()=>{setFormData(initialFormData)}
   },[deckId])
 
   
@@ -41,7 +42,7 @@ function handleChange({target}){
         <ol className="breadcrumb">
         <li key="home" className="breadcrumb-item">
           <Link to="/">
-            <span class="oi oi-home"></span> Home
+            <span className="oi oi-home"></span> Home
           </Link>
         </li>          
         <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>

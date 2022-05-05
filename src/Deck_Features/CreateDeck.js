@@ -30,7 +30,7 @@ function CreateDeck() {
       <ol className="breadcrumb">
         <li key="home" className="breadcrumb-item">
           <Link to="/">
-            <span class="oi oi-home"></span> Home
+            <span className="oi oi-home"></span> Home
           </Link>
         </li>
         <li key="CreateDeck" className="breadcrumb-item active" aria-current="page">Create Deck</li>

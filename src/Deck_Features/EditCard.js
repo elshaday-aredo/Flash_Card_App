@@ -7,7 +7,7 @@ function EditCard({deckName}){
   const {cardId,deckId} = useRouteMatch().params;
   const history = useHistory()
   const initialFormData = {front:"", back:""}
-  const [formData, setFormData]= useState({...initialFormData});
+  const [formData, setFormData]= useState(initialFormData);
 
 
   useEffect(()=>{
@@ -16,6 +16,7 @@ function EditCard({deckName}){
       setFormData(card);
     }
     getCard();
+    return()=>{setFormData(initialFormData)}
   },[cardId])
 
   async function handleFormSubmit(event){
@@ -37,7 +38,7 @@ function handleChange({target}){
         <ol className="breadcrumb">
         <li key="home" className="breadcrumb-item">
           <Link to="/">
-            <span class="oi oi-home"></span> Home
+            <span className="oi oi-home"></span> Home
           </Link>
         </li>
         <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>

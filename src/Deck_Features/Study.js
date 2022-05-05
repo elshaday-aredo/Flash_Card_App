@@ -18,6 +18,7 @@ function Study(){
       setDeck(deck)
     }
     studyCard()
+    return()=> {setDeck({}) }
   },[deckId])
 
 
@@ -30,7 +31,7 @@ function Study(){
           <ol className="breadcrumb">
             <li key="home" className="breadcrumb-item">
               <Link to="/">
-                <span class="oi oi-home"></span> Home
+                <span className="oi oi-home"></span> Home
               </Link>
             </li>
             <li key="deckName" className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deck.name}</Link></li>

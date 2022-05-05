@@ -12,6 +12,7 @@ function AddCard({deckId, deckName}){
         setDeck(deckLoaded);
       }
       loadDeck();
+      return()=>{setFormData({front:"", back:""})}
     },[deckId])
     
     
@@ -37,7 +38,7 @@ function AddCard({deckId, deckName}){
         <ol className="breadcrumb">
           <li key="home" className="breadcrumb-item">
             <Link to="/">
-              <span class="oi oi-home"></span> Home
+              <span className="oi oi-home"></span> Home
             </Link>
           </li>
           <li key="deckName" className="breadcrumb-item active"><Link to={`/decks/${deckId}`}>{deckName}</Link></li>
